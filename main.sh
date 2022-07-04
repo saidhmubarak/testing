@@ -1,8 +1,8 @@
 #! /bin/bash
+pkg list-installed > satisfied.txt
 file=satisfied.txt
 match=$(grep "termux-api" satisfied.txt)
 main () {
-	pkg list-installed > satisfied.txt
 	while read line; do
 		if [[ $match == "termux-api" ]]; then
 			echo "its working "
